@@ -1,0 +1,33 @@
+<br>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first ">
+        <img src="https://cdn-icons-png.flaticon.com/512/594/594106.png"
+          alt="" width="50" height="50" class="d-inline-block align-text-top">
+      </div>
+  
+      <!-- Login Form -->
+      <form  [formGroup]="Formulario">
+        <input type="email" id="email" class="fadeIn second" name="email" formControlName="email" placeholder="ingrese su correo electronico">
+        <br>
+                  <span class="form-text text-danger" *ngIf="campoEsValido('email')">
+                      debe de ingresar su correo electronico
+                  </span>
+
+        <input type="password" id="password" class="fadeIn third" name="login" formControlName="password" placeholder="ingrese su contraseña">
+        <br>
+                  <span class="form-text text-danger" *ngIf="campoEsValido('password')">
+                      favor de ingresar su contraseña
+                  </span>
+        <input type="button" class="fadeIn fourth" [disabled]="!Formulario.valid" value="Ingresar">
+      </form>
+    </div>
+</div>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
